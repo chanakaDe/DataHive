@@ -16,6 +16,10 @@
     <link href="lib/plugins/select2/select2.css" rel="stylesheet">
     <link href="lib/css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <script src="https://rawgit.com/jpillora/xdomain/gh-pages/dist/0.6/xdomain.js"
+            slave="http://192.168.1.101:8080/web/proxy"></script>
+
 </head>
 <body>
 <!--Start Header-->
@@ -123,7 +127,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="ajax-link" href="#/customer">Add Customer</a></li>
-                        <li><a class="ajax-link" href="#/">View Customer</a></li>
+                        <li><a class="ajax-link" href="#/view_customer">View Customer</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -242,5 +246,15 @@
 <script src="lib/plugins/tinymce/jquery.tinymce.min.js"></script>
 <!-- All functions for this theme + document.ready processing -->
 <script src="lib/js/devoops.js"></script>
+
+
+<!--Adding custom js and service-->
+
+<script src="app/controller/CustomerController.js"></script>
+<script src="app/service/CustomerService.js"></script>
+
+<script src="app/controller/CustomerOrderController.js"></script>
+<script src="app/service/CustomerOrderService.js"></script>
+
 </body>
 </html>

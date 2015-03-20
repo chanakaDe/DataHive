@@ -6,7 +6,7 @@
         </ol>
     </div>
 </div>
-<div class="row">
+<div class="row" ng-controller="CustomerController">
     <div class="col-xs-12 col-sm-12">
         <div class="box">
             <div class="box-header">
@@ -24,69 +24,73 @@
             <div class="box-content">
                 <form class="form-horizontal" role="form">
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">First name</label>
+                        <label class="col-sm-2 control-label">Customer Name</label>
 
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" placeholder="First name" data-toggle="tooltip"
-                                   data-placement="bottom" title="Tooltip for name">
+                            <input type="text" class="form-control" placeholder="Customer Name" data-toggle="tooltip"
+                                   data-placement="bottom" title="Tooltip for name" ng-model="customer.name">
                         </div>
-                        <label class="col-sm-2 control-label">Last name</label>
+                        <label class="col-sm-2 control-label">Email</label>
 
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" placeholder="Last name" data-toggle="tooltip"
-                                   data-placement="bottom" title="Tooltip for last name">
+                            <input type="text" class="form-control" placeholder="Email" data-toggle="tooltip"
+                                   data-placement="bottom" title="Tooltip for last name" ng-model="customer.email">
                         </div>
                     </div>
-                    <div class="form-group has-success has-feedback">
-                        <label class="col-sm-2 control-label">Company</label>
+                    <div class="form-group  has-feedback">
+                        <label class="col-sm-2 control-label">Address Line 1</label>
 
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" placeholder="Company">
+                            <input type="text" class="form-control" placeholder="Address Line 1"
+                                   ng-model="customer.addressline1">
                         </div>
-                        <label class="col-sm-2 control-label">Address</label>
+                        <label class="col-sm-2 control-label">Address Line 2</label>
 
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" placeholder="Address">
-                            <span class="fa fa-check-square-o txt-success form-control-feedback"></span>
-                        </div>
-                    </div>
-                    <div class="form-group has-warning has-feedback">
-                        <label class="col-sm-2 control-label">Residence</label>
-
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" placeholder="City">
-                            <span class="fa fa-key txt-warning form-control-feedback"></span>
-                        </div>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" placeholder="Country">
-                            <span class="fa fa-frown-o txt-danger form-control-feedback"></span>
-                        </div>
-                        <label class="col-sm-1 control-label">CODE</label>
-
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" placeholder="Another info" data-toggle="tooltip"
-                                   data-placement="top" title="Hello world!">
-                        </div>
-                        <div class="col-sm-2">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" checked> No exist
-                                    <i class="fa fa-square-o small"></i>
-                                </label>
-                            </div>
+                            <input type="text" class="form-control" placeholder="Address Line 2"
+                                   ng-model="customer.addressline2">
                         </div>
                     </div>
 
-                    <div class="form-group has-error has-feedback">
-                        <label class="col-sm-2 control-label">Date</label>
+                    <div class="form-group has-feedback">
+                        <label class="col-sm-2 control-label">City</label>
 
-                        <div class="col-sm-2">
-                            <input type="text" id="input_date" class="form-control" placeholder="Date">
-                            <span class="fa fa-calendar txt-danger form-control-feedback"></span>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="City" ng-model="customer.city">
                         </div>
+                        <label class="col-sm-2 control-label">Mobile No</label>
 
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Mobile No"
+                                   ng-model="customer.mobilenumber">
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-primary">Add Customer</button>
+
+                    <div class="form-group  has-feedback">
+                        <label class="col-sm-2 control-label">Password</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Password" ng-model="customer.password">
+                        </div>
+                        <label class="col-sm-2 control-label">Confirm Password</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Confirm Password">
+                        </div>
+                    </div>
+
+                    <!--<div class="form-group has-error has-feedback">-->
+                    <!--<label class="col-sm-2 control-label">Date</label>-->
+
+                    <!--<div class="col-sm-2">-->
+                    <!--<input type="text" id="input_date" class="form-control" placeholder="Date">-->
+                    <!--<span class="fa fa-calendar txt-danger form-control-feedback"></span>-->
+                    <!--</div>-->
+
+                    <!--</div>-->
+                    <div class="col-lg-2 col-lg-offset-10">
+                        <button type="button" class="btn btn-primary" ng-click="addCustomer()">Add Customer</button>
+                    </div>
                 </form>
             </div>
         </div>

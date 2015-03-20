@@ -1,16 +1,16 @@
 /**
  * Created by Chanaka on 9/3/2014.
  */
-module.factory('customerService', function ($http, $route) {
+module.factory('customerOrderService', function ($http, $route) {
 
-    var customerService = {
+    var customerOrderService = {
 
         /**
          * Get all roles from server
          *
          * @returns {*}
          */
-        saveCustomer: function (data) {
+        saveCustomerOrder: function (data) {
             return $http({
                 method: "POST",
                 data: data,
@@ -19,7 +19,7 @@ module.factory('customerService', function ($http, $route) {
                 return response.data;
             });
         },
-        getAllCustomers: function () {
+        getAllCustomerOrders: function () {
             return $http({
                 method: "GET",
                 headers: headers,
@@ -28,5 +28,5 @@ module.factory('customerService', function ($http, $route) {
             });
         }
     };
-    return customerService;
+    return customerOrderService;
 });

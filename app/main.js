@@ -10,6 +10,9 @@ module.config(function ($routeProvider) {
         }).when('/customer', {
             templateUrl: 'app/template/customer/AddCustomer.html',
             controller: ''
+        }).when('/view_customer', {
+            templateUrl: 'app/template/customer/ViewCustomer.html',
+            controller: ''
         }).otherwise({
             redirectTo: '/'
         });
