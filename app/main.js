@@ -13,6 +13,12 @@ module.config(function ($routeProvider) {
         }).when('/view_customer', {
             templateUrl: 'app/template/customer/ViewCustomer.html',
             controller: ''
+        }).when('/add_customer_order', {
+            templateUrl: 'app/template/customer_order/AddCustomerOrder.html',
+            controller: ''
+        }).when('/map', {
+            templateUrl: 'app/template/maps.html',
+            controller: ''
         }).otherwise({
             redirectTo: '/'
         });

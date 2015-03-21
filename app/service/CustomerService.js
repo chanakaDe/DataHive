@@ -26,6 +26,14 @@ module.factory('customerService', function ($http, $route) {
                 url: host.customer + '/get_all_customer_details'}).then(function (response) {
                 return response.data;
             });
+        },
+        savePumpingDetails: function () {
+            return $http({
+                method: "POST",
+                headers: headers,
+                url: host.pumping_details + '/save'}).then(function (response) {
+                return response.data;
+            });
         }
     };
     return customerService;

@@ -133,10 +133,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-table"></i>
-                        <span class="hidden-xs">Tables</span>
+                        <span class="hidden-xs">Customer Order</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="ajax-link" href="app/template/tables_simple.html">Simple Tables</a></li>
+                        <li><a class="ajax-link" href="#/add_customer_order">Add Order</a></li>
                         <li><a class="ajax-link" href="app/template/tables_datatables.html">Data Tables</a></li>
                         <li><a class="ajax-link" href="app/template/tables_beauty.html">Beauty Tables</a></li>
                     </ul>
@@ -191,7 +191,7 @@
                         <span class="hidden-xs">Maps</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="ajax-link" href="app/template/maps.html">OpenStreetMap</a></li>
+                        <li><a class="ajax-link" href="#/map">OpenStreetMap</a></li>
                         <li><a class="ajax-link" href="app/template/map_fullscreen.html">Fullscreen map</a></li>
                     </ul>
                 </li>
@@ -246,8 +246,7 @@
 <script src="lib/plugins/tinymce/jquery.tinymce.min.js"></script>
 <!-- All functions for this theme + document.ready processing -->
 <script src="lib/js/devoops.js"></script>
-
-
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <!--Adding custom js and service-->
 
 <script src="app/controller/CustomerController.js"></script>

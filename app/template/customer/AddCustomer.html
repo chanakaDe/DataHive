@@ -1,3 +1,21 @@
+<style>
+    #map1 {
+        height: 420px;
+        width: auto;
+    }
+
+    .infoWindowContent {
+        font-size: 14px !important;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+</style>
+
 <div class="row">
     <div id="breadcrumb" class="col-md-12">
         <ol class="breadcrumb">
@@ -79,49 +97,96 @@
                         </div>
                     </div>
 
-                    <!--<div class="form-group has-error has-feedback">-->
-                    <!--<label class="col-sm-2 control-label">Date</label>-->
+                    <hr>
+                    <label>Pumping Information</label>
+                    <hr>
+                    <div class="form-group  has-feedback">
+                        <label class="col-sm-2 control-label">City</label>
 
-                    <!--<div class="col-sm-2">-->
-                    <!--<input type="text" id="input_date" class="form-control" placeholder="Date">-->
-                    <!--<span class="fa fa-calendar txt-danger form-control-feedback"></span>-->
-                    <!--</div>-->
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Pump City" ng-model="pump.city">
+                        </div>
+                        <label class="col-sm-2 control-label">Label</label>
 
-                    <!--</div>-->
-                    <div class="col-lg-2 col-lg-offset-10">
-                        <button type="button" class="btn btn-primary" ng-click="addCustomer()">Add Customer</button>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Label" ng-model="pump.label">
+                        </div>
+                    </div>
+
+                    <div class="form-group  has-feedback">
+                        <label class="col-sm-2 control-label">Pump Address Line 1</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Pump Address Line 1"
+                                   ng-model="pump.addressline1">
+                        </div>
+                        <label class="col-sm-2 control-label">Pump Address Line 2</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Pump Address Line 2"
+                                   ng-model="pump.addressline2">
+                        </div>
+                    </div>
+
+                    <div class="form-group  has-feedback">
+                        <label class="col-sm-2 control-label">Pumping Type</label>
+
+                        <div class="col-sm-4">
+                            <select class="form-control" ng-model="pump.pumpingType">
+                                <option value="small_pump">Small Pump</option>
+                                <option value="normal_pump">Normal Pump</option>
+                                <option value="massive_pump">Massive Pump</option>
+                            </select>
+                        </div>
+                        <label class="col-sm-2 control-label">Diameter</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Diameter Value"
+                                   ng-model="pump.diameter">
+                        </div>
+                    </div>
+
+                    <div class="form-group  has-feedback">
+                        <label class="col-sm-2 control-label">Flange</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Flange"
+                                   ng-model="pump.flange">
+                        </div>
+                        <label class="col-sm-2 control-label">Description</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Enter Description">
+                        </div>
+                    </div>
+
+                    <div class="form-group  has-feedback">
+                        <label class="col-sm-2 control-label">Latitude</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Latitude"
+                                   ng-model="pump.latitude">
+                        </div>
+                        <label class="col-sm-2 control-label">Longitude</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" placeholder="Longitude"
+                                   ng-model="pump.longitude">
+                        </div>
+                    </div>
+
+                    <div class="form-group  has-feedback">
+                        <div class="col-lg-2 col-lg-offset-10">
+                            <button type="button" class="btn btn-primary" ng-click="addCustomer()">Add Customer</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group  has-feedback">
+                        <div id="map1"></div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    // Run Select2 plugin on elements
-    function DemoSelect2() {
-        $('#s2_with_tag').select2({placeholder: "Select OS"});
-        $('#s2_country').select2();
-    }
-    // Run timepicker
-    function DemoTimePicker() {
-        $('#input_time').timepicker({setDate: new Date()});
-    }
-    $(document).ready(function () {
-        // Create Wysiwig editor for textare
-        TinyMCEStart('#wysiwig_simple', null);
-        TinyMCEStart('#wysiwig_full', 'extreme');
-        // Add slider for change test input length
-        FormLayoutExampleInputLength($(".slider-style"));
-        // Initialize datepicker
-        $('#input_date').datepicker({setDate: new Date()});
-        // Load Timepicker plugin
-        LoadTimePickerScript(DemoTimePicker);
-        // Add tooltip to form-controls
-        $('.form-control').tooltip();
-        LoadSelect2Script(DemoSelect2);
-        // Load example of form validation
-        LoadBootstrapValidatorScript(DemoFormValidator);
-        // Add drag-n-drop feature to boxes
-        WinMove();
-    });
-</script>
+
