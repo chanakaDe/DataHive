@@ -1,7 +1,7 @@
 /**
  * Created by Chanaka on 9/3/2014.
  */
-module.factory('customerService', function ($http, $route) {
+module.factory('customerService', function ($http) {
 
     var customerService = {
 
